@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -59,10 +59,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
       }}
-      className="flex flex-col items-center space-y-3 text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-amber-200 dark:border-amber-700"
+      className="flex flex-col items-center space-y-3 text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-orange-200 dark:border-orange-700"
     >
-      <Icon className="h-10 w-10 text-amber-500 dark:text-amber-400" />
-      <h2 className="text-xl font-bold text-amber-700 dark:text-amber-300">
+      <Icon className="h-10 w-10 text-orange-500 dark:text-orange-400" />
+      <h2 className="text-xl font-bold text-orange-700 dark:text-orange-300">
         {title}
       </h2>
       <p className="text-sm text-gray-600 dark:text-gray-300">{description}</p>
@@ -75,29 +75,29 @@ export default function PawPalsComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 dark:from-gray-900 dark:to-gray-800">
-      <header className="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-amber-200 dark:border-amber-800">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800">
+      <header className="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-orange-200 dark:border-orange-800">
         <a className="flex items-center justify-center" href="#">
-          <PawPrint className="h-6 w-6 text-amber-500 dark:text-amber-400" />
-          <span className="ml-2 text-lg font-bold text-amber-700 dark:text-amber-300">
+          <PawPrint className="h-6 w-6 text-orange-500 dark:text-orange-400" />
+          <span className="ml-2 text-lg font-bold text-orange-700 dark:text-orange-300">
             PawPals
           </span>
         </a>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <a
-            className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+            className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
             href="#"
           >
             Our Story
           </a>
           <a
-            className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+            className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
             href="#"
           >
             Become a PawPal
           </a>
           <a
-            className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+            className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
             href="#"
           >
             Wag Hello
@@ -106,7 +106,7 @@ export default function PawPalsComponent() {
         <Button
           variant="ghost"
           size="icon"
-          className="ml-auto md:hidden text-amber-700 dark:text-amber-300"
+          className="ml-auto md:hidden text-orange-700 dark:text-orange-300"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <Menu className="h-6 w-6" />
@@ -117,23 +117,23 @@ export default function PawPalsComponent() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 z-40 p-4 border-b border-amber-200 dark:border-amber-800"
+          className="fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 z-40 p-4 border-b border-orange-200 dark:border-orange-800"
         >
           <nav className="flex flex-col gap-4">
             <a
-              className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+              className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
               href="#"
             >
               Our Story
             </a>
             <a
-              className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+              className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
               href="#"
             >
               Become a PawPal
             </a>
             <a
-              className="text-sm font-medium text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400 transition-colors"
+              className="text-sm font-medium text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400 transition-colors"
               href="#"
             >
               Wag Hello
@@ -151,13 +151,13 @@ export default function PawPalsComponent() {
                 transition={{ duration: 0.6 }}
                 className="space-y-2"
               >
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-amber-800 dark:text-amber-200">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-orange-800 dark:text-orange-200">
                   Bringing Smiles,{" "}
-                  <span className="text-amber-500 dark:text-amber-400">
+                  <span className="text-orange-500 dark:text-orange-400">
                     One Wag at a Time
                   </span>
                 </h1>
-                <p className="mx-auto max-w-[700px] text-amber-700 md:text-xl dark:text-amber-300">
+                <p className="mx-auto max-w-[700px] text-orange-700 md:text-xl dark:text-orange-300">
                   PawPals connects loving dogs and their owners with elderly
                   friends for heartwarming visits and tail-wagging adventures!
                 </p>
@@ -182,17 +182,17 @@ export default function PawPalsComponent() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     autoComplete="email"
-                    className="max-w-lg flex-1 bg-white dark:bg-gray-800 border-amber-300 dark:border-amber-700 focus:ring-amber-500 focus:border-amber-500"
+                    className="max-w-lg flex-1 bg-white dark:bg-gray-800 border-orange-300 dark:border-orange-700 focus:ring-orange-500 focus:border-orange-500"
                   />
                   <Button
                     type="submit"
-                    className="bg-amber-500 hover:bg-amber-600 text-white"
+                    className="bg-orange-500 hover:bg-orange-600 text-white"
                   >
                     Join the Pack
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
-                <p className="text-xs text-amber-700 dark:text-amber-300">
+                <p className="text-xs text-orange-700 dark:text-orange-300">
                   Wag your way into our community! Sign up to learn more or
                   become a furry friend volunteer.
                 </p>
@@ -200,7 +200,7 @@ export default function PawPalsComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-amber-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-orange-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               <FeatureCard
@@ -230,40 +230,40 @@ export default function PawPalsComponent() {
               className="grid gap-10 lg:grid-cols-2 items-center"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-amber-800 dark:text-amber-200">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-orange-800 dark:text-orange-200">
                   How PawPals Spreads Joy
                 </h2>
-                <p className="text-amber-700 dark:text-amber-300 md:text-lg">
+                <p className="text-orange-700 dark:text-orange-300 md:text-lg">
                   It&apos;s as easy as a walk in the park! Here&apos;s how we
                   match wagging tails with warm hearts:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center space-x-2">
-                    <Smile className="h-5 w-5 text-amber-500 dark:text-amber-400" />
-                    <span className="text-amber-700 dark:text-amber-300">
+                    <Smile className="h-5 w-5 text-orange-500 dark:text-orange-400" />
+                    <span className="text-orange-700 dark:text-orange-300">
                       Create your pawsome profile
                     </span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Smile className="h-5 w-5 text-amber-500 dark:text-amber-400" />
-                    <span className="text-amber-700 dark:text-amber-300">
+                    <Smile className="h-5 w-5 text-orange-500 dark:text-orange-400" />
+                    <span className="text-orange-700 dark:text-orange-300">
                       Get matched with local fur-ends
                     </span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Smile className="h-5 w-5 text-amber-500 dark:text-amber-400" />
-                    <span className="text-amber-700 dark:text-amber-300">
+                    <Smile className="h-5 w-5 text-orange-500 dark:text-orange-400" />
+                    <span className="text-orange-700 dark:text-orange-300">
                       Schedule your first tail-wagging meetup
                     </span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Smile className="h-5 w-5 text-amber-500 dark:text-amber-400" />
-                    <span className="text-amber-700 dark:text-amber-300">
+                    <Smile className="h-5 w-5 text-orange-500 dark:text-orange-400" />
+                    <span className="text-orange-700 dark:text-orange-300">
                       Enjoy the cuddles and companionship!
                     </span>
                   </li>
                 </ul>
-                <Button className="mt-4 bg-amber-500 hover:bg-amber-600 text-white">
+                <Button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white">
                   Become a PawPal
                 </Button>
               </div>
@@ -279,17 +279,17 @@ export default function PawPalsComponent() {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-amber-100 dark:bg-gray-800">
+      <footer className="w-full py-6 bg-orange-100 dark:bg-gray-800">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200">
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-200">
                 About Us
               </h3>
               <ul className="space-y-1">
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Our Pawsome Mission
@@ -297,7 +297,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Meet the Pack
@@ -305,7 +305,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Join Our Kennel
@@ -314,13 +314,13 @@ export default function PawPalsComponent() {
               </ul>
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200">
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-200">
                 Fur-tastic Services
               </h3>
               <ul className="space-y-1">
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     For Senior Friends
@@ -328,7 +328,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     For Dog Owners
@@ -336,7 +336,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Yappy Hour Events
@@ -345,13 +345,13 @@ export default function PawPalsComponent() {
               </ul>
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200">
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-200">
                 Fetch More Info
               </h3>
               <ul className="space-y-1">
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Woof-worthy Blog
@@ -359,7 +359,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     FAQs (Fur-quently Asked Questions)
@@ -367,7 +367,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Bark for Help
@@ -376,13 +376,13 @@ export default function PawPalsComponent() {
               </ul>
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200">
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-200">
                 The Fine Print
               </h3>
               <ul className="space-y-1">
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Terms of Fur-vice
@@ -390,7 +390,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Privacy Paw-licy
@@ -398,7 +398,7 @@ export default function PawPalsComponent() {
                 </li>
                 <li>
                   <a
-                    className="text-sm text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                    className="text-sm text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
                     href="#"
                   >
                     Cookie Treats Policy
@@ -407,14 +407,14 @@ export default function PawPalsComponent() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 border-t border-amber-200 dark:border-amber-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xs text-amber-700 dark:text-amber-300">
+          <div className="mt-8 border-t border-orange-200 dark:border-orange-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-xs text-orange-700 dark:text-orange-300">
               © 2023 PawPals. All rights reserved. Tails are always wagging!
             </p>
             <div className="flex space-x-4 mt-4 sm:mt-0">
               <a
                 href="#"
-                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                className="text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -432,7 +432,7 @@ export default function PawPalsComponent() {
               </a>
               <a
                 href="#"
-                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                className="text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -450,7 +450,7 @@ export default function PawPalsComponent() {
               </a>
               <a
                 href="#"
-                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-400"
+                className="text-orange-700 hover:text-orange-500 dark:text-orange-300 dark:hover:text-orange-400"
               >
                 <span className="sr-only">Twitter</span>
                 <svg
