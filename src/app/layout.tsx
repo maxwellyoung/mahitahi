@@ -7,6 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PawPals",
   description: "Connecting Hearts, One Paw at a Time",
+  icons: {
+    icon: "/paw.svg",
+    apple: "/paw.svg",
+    shortcut: "/paw.svg",
+  },
 };
 
 export default function RootLayout({
